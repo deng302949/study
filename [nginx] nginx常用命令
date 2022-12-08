@@ -2,3 +2,7 @@
 - ps -A | grep nginx 查看nginx 服务状态
 - service nginx restart nginx服务重启
 - netstat -tlnup|grep nginx 查看监听的端口是否存在
+- nginx 配置访问静态文件
+  location /u2JPse9Czx.txt {
+    root /data/www/sites/u2JPse9Czx.txt;
+  }
