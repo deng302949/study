@@ -1,1 +1,2 @@
 - nginx reload -s 重启nginx
+- ps -A | grep nginx 查看nginx 服务状态
