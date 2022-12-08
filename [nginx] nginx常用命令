@@ -1,6 +1,7 @@
-- nginx reload -s 重启nginx
 - ps -A | grep nginx 查看nginx 服务状态
-- service nginx restart nginx服务重启
+- 重启nginx服务并刷新域名 
+  service nginx restart nginx服务重启
+  nginx reload -s
 - netstat -tlnup|grep nginx 查看监听的端口是否存在
 - nginx 配置访问静态文件
   location /u2JPse9Czx.txt {
