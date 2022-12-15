@@ -4,3 +4,4 @@
 - sudo -i 切换超级管理员权限 无需密码
 - wq！ 退出保存
 - pwd 展示当前路径
+- scp -r -i /xx.pem /mepath target:path
