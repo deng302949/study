@@ -1,6 +1,6 @@
 ### 什么是批处理
   - 说明： 
-    react将多个状态更新组合程单个新渲染， 获得更好得性能。（白话： 将多个setstate结合）
+    react将多个状态更新组合程单个新渲染， 获得更好得性能。（白话： 将多个setstate结合， react18前setstate合并只在同步，在异步中不会合并。）
   - React 18的createRoot，使用了createRoot说明更新会自动批处理
     + ps: 手动批处理库unstable_batchedUpdates
     + eg.
