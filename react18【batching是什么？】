@@ -1,3 +1,15 @@
 ### 什么是批处理
-  - react将多个状态更新组合程单个新渲染， 获得更好得性能。
-  - 
+  - 说明： 
+    react将多个状态更新组合程单个新渲染， 获得更好得性能。
+  - React 18的createRoot，使用了createRoot说明更新会自动批处理
+    + ps: 手动批处理库unstable_batchedUpdates
+    + eg.
+    ``` function handleClick() {
+      fetchSomething().then(() => {
+        unstable_batchedUpdates(()=>{
+          setCount((c) => c + 1);
+          setFlag((f) => !f);
+        })
+      });
+    }
+    ```
