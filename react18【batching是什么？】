@@ -27,6 +27,27 @@
      console.log('渲染了第2次')
     }
     ```
+react17 18 区别
+1.
+```
+17/
+function handleClick() {
+  setCount((c) => c + 1); // Does not re-render yet
+  setFlag((f) => !f); // Does not re-render yet
+  // React will only re-render once at the end (that's batching!)
+}
+18/
+fetchSomething().then(() => {
+  // React 17 and earlier does NOT batch these because
+  // they run *after* the event in a callback, not *during* it
+  setCount((c) => c + 1); // Causes a re-render
+  setFlag((f) => !f); // Causes a re-render
+});
+```
+理解： 
+  执行更新事件，
+  分发action时候存在获取lane和fiber的操作，并且，根据lane会去 scheduleUpdateOnFiber 进行fiber的调度更新
+  
 #### 总结
   升级到react18时，有以下更新:
     自动批处理建立在使用createRoot的前提
