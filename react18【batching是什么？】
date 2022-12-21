@@ -27,3 +27,9 @@
      console.log('渲染了第2次')
     }
     ```
+#### 总结
+  升级到react18时，有以下更新:
+    自动批处理建立在使用createRoot的前提
+    通过flushSync在setState之间读取状态时解决批处理问题
+    影响:在 timeouts, promises, native event处理程序或任何其他事件内的更新将以与在React事件内的更新相同的方式批处理，而在react17中默认不这样
+    谨慎使用unstable_batchedUpdates
