@@ -13,3 +13,17 @@
       });
     }
     ```
+    + 不做批处理ReactDOM.flushSync()
+    +eg.
+    ```
+    function handleClick() {
+     flushSync(() => {
+       setCounter(c => c + 1);
+     });
+     console.log('渲染了第1次')
+     flushSync(() => {
+       setFlag(f => !f);
+     });
+     console.log('渲染了第2次')
+    }
+    ```
