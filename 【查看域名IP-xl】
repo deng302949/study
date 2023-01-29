@@ -1,1 +1,2 @@
 nslookup 域名
+ipconfig/flushdns 清除dns
