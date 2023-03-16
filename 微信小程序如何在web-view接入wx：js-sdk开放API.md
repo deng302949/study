@@ -32,7 +32,7 @@
   //   console.log(r);
   // }, 'scanQRCode' || 'chooseImage');
   const wxGetQRcode = async (callback, type) => {
-    // https://storagets.gonest.cn/storageMange/homePage
+    // window.location.href = https://storagets.gonest.cn/storageMange/homePage
     let res;
     try {
       res = await Http.post(
@@ -88,6 +88,6 @@
   };
   ```
 
-  **备注: ** 需要在首页 执行一次config文件
+  **备注: ** 需要在首页 执行一次config函数
 
   JS-SDK： https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html
