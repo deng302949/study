@@ -1,1 +1,7 @@
 打包关于python的， 可能是电脑没配置上python环境变量
+
+
+https://www.voycn.com/article/jsdiaoyongcdongtaikudllzuijiandemohewentijijinshoucangban
+
+193问题： 当你的DLL是32位的， 你的依赖库也要是32位的， （如何保证依赖库是32位呢： 把node切换成32位版本然后从新安装依赖就行）
+127问题： dll的放出的方法与ffi引入的方法不匹配、
